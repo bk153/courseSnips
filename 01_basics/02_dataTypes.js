@@ -59,8 +59,16 @@ console.log(typeof arr);    //Object
 console.log(typeof myObj);  //Object
 console.log(typeof myFunction); // function / ObjectFunction
 
-//* ==============================================================================
+//- Changes in the original value, doesn't have a copy value. It refers to the original value and changes it only.
+let userOne = {
+  email:'abc@gmail.com',
+  upi:'abc@ybl'
+}
 
+let userTwo = userOne
+userTwo.email = "qwe@gmail.com"
 
+console.log(userOne.email);
+console.log(userTwo.email);
 
 
