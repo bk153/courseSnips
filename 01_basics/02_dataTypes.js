@@ -19,6 +19,7 @@ let stocks = 884169965635298656356895681778175n;
 const id = Symbol("123");
 const id_1 = Symbol("123");
 // console.log(id === id_1); // false
+console.log(typeof id);
 
 //-Object
 // console.log(typeof name); //? string
@@ -26,14 +27,25 @@ const id_1 = Symbol("123");
 // console.log(typeof null);//? Object
 // console.log(typeof undefined);//? undefined
 
-//* -----------------------------------------------------------
+//* ========================================================================================
 // => Depending on the basis of values stored or accessed in memory, data types are majorly categorized into 2 types:
 // Primitive :
 // Call by Value, where we take a copy of the value and refer it for a change. So the change is made on the copy Value not in the original
 // String, Number, Boolean, null, undefined, Symbol, BigInt
 
-// Non-Primitives
+// Memory_Stack
+let myName = "Bhawani_K"
+let nickName = myName //- Here in myName, JS gets the copy value of the original, such that it doesn't change the original value. 
+nickName = "Raju"
+
+console.log(myName);
+console.log(nickName);
+
+//* ===========================================
+
+// Non-Primitives //- Changes in the original value, doesn't have a copy value. It refers to the original value and changes it only.
 // Reference Type
+// Memory_Heap
 // Array, Objects, Functions
 const arr = ["A", "B", "C"];
 let myObj = {
@@ -46,3 +58,9 @@ const myFunction = function(){
 console.log(typeof arr);    //Object
 console.log(typeof myObj);  //Object
 console.log(typeof myFunction); // function / ObjectFunction
+
+//* ==============================================================================
+
+
+
+
